@@ -23,7 +23,7 @@ export default function TextInput({stage}) {
     }
 
     return (
-        <form className="text-input stage flex" action="">
+        <form className="text-input flex" action="">
             {content}
         </form>
     ) 
