@@ -8,8 +8,8 @@ export default function RightImage({stage}) {
 
     return(
         <div 
-        style={{backgroundImage: `url(${IMG_URL[stage]})`}}
-        className="image">
+            style={{backgroundImage: `url(${IMG_URL[stage]})`}}
+            className="image">
         </div>
     )
 }

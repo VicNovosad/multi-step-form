@@ -32,24 +32,20 @@ body{
 }
 
 .left-container {
-  /* padding: 0; */
   width: 90%;
 }
 
 .left-container.flex .inner-left-container{
   align-items: flex-start;
   flex-direction: column;
-  /* background-color: red; */
   width: 100%;
   max-width: 600px;
 }
 
 .left-container h1{
   font-size: 46px;
-  /* border: 1px solid coral; */
   text-align: left;
   white-space: pre-line;
-  /* align-self: flex-start; */
 }
 
 .left-container .text-input{
@@ -89,12 +85,6 @@ body{
   justify-content: flex-start;
 }
 
-.left-container .text-input .button-wrap{
-  margin: 20px 0 50px;
-  justify-content: flex-start;
-  width: 100%;
-}
-
 .left-container input[type="submit"]:hover{
   cursor: pointer;
 }
@@ -104,22 +94,28 @@ body{
   height: 40px;
   font-size: 18px;
   font-weight: 600;
-  margin: 20px 10px 0 0;
+  margin: 20px 20px 0 0;
   background: none;
   border: 1px solid white;
   color: white;
 }
 
+.left-container .button-wrap{
+  margin: 20px 0 50px;
+  justify-content: flex-start;
+  width: 100%;
+}
 
+.left-container .button-wrap input.selected-button,
 .left-container .button-group input[type="submit"],
-.left-container .text-input .button-wrap input:active,
-.left-container .text-input .button-wrap input:hover{
+.left-container .button-wrap input:active,
+.left-container .button-wrap input:hover{
   background: white;
   color: #806c6c;
 }
 
 .left-container .button-group input[type="submit"]:hover,
-.left-container .text-input .button-wrap input:active{
+.left-container .button-wrap input:active{
   opacity: .8;
 }
 
@@ -129,7 +125,7 @@ body{
 }
 
 .left-container .text-input #additional-info{
-  margin: 30px 0;
+  margin: 10px 0 40px;
 }
 
 @media screen and (min-width: 800px) {
