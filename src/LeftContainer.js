@@ -1,3 +1,4 @@
+import { useState } from "react";
 import TextInput from "./TextInput";
 import ButtonGroup from "./ButtonGroup";
 
@@ -10,20 +11,31 @@ const title = [
 
 export default function LeftContainer({stage, setStage}) {
     
+    const [results, setResults] = useState({});
+    const handleChange = e => {
+        const { id, value } = e.target;
+        setResults(prevResults => ({
+            ...prevResults,
+            [id]: value
+        }));
+    };
+
     let content;
     
     if (stage === 0) {
         content = (
-            <TextInput id="email" value="What is your email?"/>
+            <TextInput id="email" value="What is your email?" onChange={handleChange}/>
         )
     } else if (stage === 1) {
         content = (
-            <ButtonGroup />
+            <ButtonGroup setResults={setResults} />
         )
     } else if (stage === 2) {
         content = (
-            <TextInput id="additional-info" value=""/>
+            <TextInput id="additionalInfo" value="" onChange={handleChange}/>
         )
+    }   else if (stage === 3) {
+        alert(JSON.stringify(results));
     }
 
     return(
